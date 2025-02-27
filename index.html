@@ -17,7 +17,12 @@
 			}
 
 			function HomePage() {
+				const [likesCount, setLikesCount] = React.useState(0);
 				const peakyNames = [ 'Tommy Shelby', 'Arthur Shelby', 'John Shelby', 'Ada Shelby', 'Finn Shelby', 'Polly Gray' ];
+
+				function handleClick() {
+					setLikesCount(likesCount + 1);
+				}
 
 				return (
 					<div>
@@ -25,6 +30,7 @@
 						<ul>
 							{peakyNames.map((name) => (<li key={name}>{name}</li>))}
 						</ul>
+						<button onClick={handleClick}>Like ({likesCount})</button>
 					</div>
 				);
 			}
