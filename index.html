@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<div id="app"></div>
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script type="text/jsx">
+			// select the div with id 'app'.
+			const app = document.getElementById('app');
+
+			// Set app as the root element to render react components.
+			const root = ReactDOM.createRoot(app);
+
+			// Create a Header component.
+			function Header() {
+				return (<h1>Develop. Preview. Ship.</h1>);
+			}
+
+			// Render the Header component.
+			root.render(<Header />);
+		</script>
+	</body>
+</html>
