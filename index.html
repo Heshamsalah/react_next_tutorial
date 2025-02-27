@@ -12,12 +12,21 @@
 			const root = ReactDOM.createRoot(app);
 
 			// Create a Header component.
-			function Header() {
-				return (<h1>Develop. Preview. Ship.</h1>);
+			function Header({ title }) {
+				return (<h1>{title ? title : 'Default Title'}</h1>);
+			}
+
+			function HomePage() {
+				return (
+					<div>
+						<Header title="Develop. Preview. Ship."/>
+						<Header />
+					</div>
+				);
 			}
 
 			// Render the Header component.
-			root.render(<Header />);
+			root.render(<HomePage />);
 		</script>
 	</body>
 </html>
